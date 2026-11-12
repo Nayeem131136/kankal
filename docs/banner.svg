@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" width="1200" height="380" role="img" aria-label="KANKAL, see your own skeleton, live">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#070c18"/><stop offset="1" stop-color="#03050a"/></linearGradient>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5ee1ff"/><stop offset="1" stop-color="#9db8ff"/></linearGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#5ee1ff" stop-opacity="0"/><stop offset=".5" stop-color="#5ee1ff" stop-opacity=".35"/><stop offset="1" stop-color="#5ee1ff" stop-opacity="0"/></linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#5ee1ff" stroke-opacity=".06"/></pattern>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <clipPath id="clip"><rect width="1200" height="380" rx="22"/></clipPath>
+  </defs>
+  <g clip-path="url(#clip)">
+    <rect width="1200" height="380" fill="url(#bg)"/>
+    <rect width="1200" height="380" fill="url(#grid)"/>
+    <!-- scanning beam -->
+    <rect y="0" width="160" height="380" fill="url(#beam)"><animate attributeName="x" values="-160;1200" dur="4.5s" repeatCount="indefinite"/></rect>
+
+    <!-- logo -->
+    <g transform="translate(70,70)" filter="url(#glow)">
+      <g><animateTransform attributeName="transform" type="scale" values="1;1.06;1;1.03;1" keyTimes="0;.12;.3;.42;1" dur="1.6s" repeatCount="indefinite" additive="sum"/></g>
+      <rect width="150" height="150" rx="34" fill="#05070c" stroke="#5ee1ff" stroke-opacity=".25"/>
+      <g transform="translate(11,11) scale(2.0)">
+        <path d="M32 8c-11 0-18 7.500-18 18 0 6.500 3 10.500 7 13.500V47h7v-4h2v4h4v-4h2v4h7v-7.500c4-3 7-7 7-13.500 0-10.500-7-18-18-18z" fill="none" stroke="url(#g)" stroke-width="2.800" stroke-linejoin="round"/>
+        <circle cx="25" cy="27" r="4" fill="url(#g)"><animate attributeName="opacity" values="1;1;.1;1;1" keyTimes="0;.8;.86;.92;1" dur="3.4s" repeatCount="indefinite"/></circle>
+        <circle cx="39" cy="27" r="4" fill="url(#g)"><animate attributeName="opacity" values="1;1;.1;1;1" keyTimes="0;.8;.86;.92;1" dur="3.4s" repeatCount="indefinite"/></circle>
+        <path d="M3 55h14l4-8 5 14 4-10 3 4h28" fill="none" stroke="#ff4d6d" stroke-width="2.400" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="90" stroke-dashoffset="90"><animate attributeName="stroke-dashoffset" values="90;0;0;-90" keyTimes="0;.45;.7;1" dur="1.6s" repeatCount="indefinite"/></path>
+      </g>
+    </g>
+
+    <!-- title -->
+    <text x="260" y="170" font-family="'Unbounded','Inter','Segoe UI',Arial,sans-serif" font-weight="900" font-size="104" letter-spacing="6" fill="url(#g)" filter="url(#glow)">KANKAL
+      <animate attributeName="opacity" values="0;1" dur="1.2s" fill="freeze"/></text>
+    <text x="268" y="232" font-family="'Hind Siliguri','Noto Sans Bengali','Nirmala UI',sans-serif" font-weight="700" font-size="54" fill="#eceadc" fill-opacity=".85">কঙ্কাল<animate attributeName="opacity" values="0;0;1" keyTimes="0;.5;1" dur="1.6s" fill="freeze"/></text>
+
+    <!-- alternating tagline -->
+    <g font-family="'Inter','Hind Siliguri','Nirmala UI','Segoe UI',Arial,sans-serif" font-size="28" fill="#eaf0fb" font-weight="600">
+      <text x="268" y="288">See your own skeleton. Live.<animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;.42;.5;.92;1" dur="6s" repeatCount="indefinite"/></text>
+      <text x="268" y="288">নিজের কঙ্কাল দেখো। লাইভ।<animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;.42;.5;.92;1" dur="6s" repeatCount="indefinite"/></text>
+    </g>
+    <text x="268" y="330" font-family="'Inter','Segoe UI',Arial,sans-serif" font-size="15" letter-spacing="4" fill="#5ee1ff" fill-opacity=".85">3D SKULL · BRAIN · MUSCLES · HAND BONES  ·  IN YOUR BROWSER</text>
+
+    <!-- ECG running across the bottom -->
+    <path d="M0 360h300l16-26 20 52 20-34 14 8h170l16-26 20 52 20-34 14 8h560" fill="none" stroke="#ff4d6d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="260 1800" opacity=".9" filter="url(#glow)">
+      <animate attributeName="stroke-dashoffset" values="2060;0" dur="3.2s" repeatCount="indefinite"/></path>
+
+    <!-- floating sparks -->
+    <g fill="#fff0a8">
+      <circle cx="980" cy="90" r="3"><animate attributeName="opacity" values="0;1;0" dur="2.1s" repeatCount="indefinite"/></circle>
+      <circle cx="1060" cy="150" r="2.4"><animate attributeName="opacity" values="0;1;0" dur="2.7s" begin=".6s" repeatCount="indefinite"/></circle>
+      <circle cx="930" cy="200" r="2"><animate attributeName="opacity" values="0;1;0" dur="1.9s" begin="1.1s" repeatCount="indefinite"/></circle>
+      <circle cx="1110" cy="250" r="3"><animate attributeName="opacity" values="0;1;0" dur="2.4s" begin=".3s" repeatCount="indefinite"/></circle>
+      <circle cx="1010" cy="300" r="2.2"><animate attributeName="opacity" values="0;1;0" dur="3s" begin="1.6s" repeatCount="indefinite"/></circle>
+    </g>
+  </g>
+  <rect x=".5" y=".5" width="1199" height="379" rx="22" fill="none" stroke="#5ee1ff" stroke-opacity=".25"/>
+</svg>
